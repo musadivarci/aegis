@@ -2,9 +2,19 @@
 
 > **Personal AI Knowledge & Decision Engine**
 
-Aegis is an experimental personal intelligence system designed to connect **knowledge, decisions, projects and context** into one persistent graph.
+**Created and engineered by [Musa Divarcı](https://github.com/musadivarci).**
 
-The goal is simple: move beyond chat history and build an AI-assisted system that can understand **what you know, what you decided, why you decided it, and how those decisions relate over time**.
+Aegis is an experimental personal intelligence system designed by **Musa Divarcı** to connect **knowledge, decisions, projects and context** into one persistent, inspectable memory architecture.
+
+The goal is simple: move beyond disposable chat history and build an AI-assisted system that can understand **what you know, what you decided, why you decided it, and how those decisions relate over time**.
+
+## Project identity
+
+- **Creator / Project Lead:** Musa Divarcı
+- **GitHub:** [@musadivarci](https://github.com/musadivarci)
+- **Project:** Aegis — Personal AI Knowledge & Decision Engine
+- **Focus:** AI systems architecture, persistent memory, RAG, semantic retrieval, knowledge graphs and traceable reasoning
+- **Repository:** `musadivarci/aegis`
 
 ## Why Aegis exists
 
@@ -60,18 +70,9 @@ Data Layer
    +--> Audit / Decision History
 ```
 
-## Planned stack
+## Technology
 
-- **Next.js**
-- **React**
-- **TypeScript**
-- **PostgreSQL**
-- **Supabase**
-- **pgvector**
-- **RAG**
-- **Embeddings**
-- **LLM provider abstraction**
-- **Vercel**
+`Next.js` · `React` · `TypeScript` · `PostgreSQL` · `Supabase` · `pgvector` · `RAG` · `Embeddings` · `LLM provider abstraction` · `Vercel`
 
 ## Design principles
 
@@ -90,21 +91,33 @@ Semantic similarity is useful, but graph relationships, metadata and recency als
 **5. The system should become more useful over time.**  
 Every meaningful interaction should improve future context.
 
+## Engineering signature
+
+Aegis reflects Musa Divarcı's approach to software architecture: separate durable data from replaceable AI models, make system decisions explicit, and design AI features around inspectability rather than opaque automation.
+
+> **The model may reason about memory. It does not own memory.**
+
 ## Status
 
-Aegis is currently in the **architecture and foundation phase**.
+Aegis is under active development. The foundation includes a Next.js/TypeScript application, domain contracts, provider-independent embedding architecture, semantic retrieval, a Supabase/pgvector persistence design, traceable answer contracts and CI build validation.
 
-The first milestone is a working vertical slice:
+The first vertical slice follows this path:
 
-`capture knowledge -> store embeddings -> retrieve context -> generate traceable AI response`
+`capture knowledge -> create embedding -> retrieve context -> produce traceable answer`
 
-## Roadmap
+## Documentation
 
-See [`docs/ROADMAP.md`](docs/ROADMAP.md).
+- [Architecture](docs/ARCHITECTURE.md)
+- [Roadmap](docs/ROADMAP.md)
+- [ADR-001 — Memory-first architecture](docs/ADR-001-memory-first-architecture.md)
 
-## Architecture
+## Author
 
-See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+**Musa Divarcı** — Software Developer · Technology Leader · AI Systems Builder
+
+GitHub: [github.com/musadivarci](https://github.com/musadivarci)
+
+Aegis is an independent software engineering project created and maintained by Musa Divarcı.
 
 ---
 
