@@ -39,6 +39,7 @@ Instead of asking an AI to remember everything implicitly, Aegis makes memory a 
 - **Semantic Memory** — embeddings and vector search
 - **Knowledge Graph** — relationships between people, topics, projects and decisions
 - **AI Reasoning Layer** — retrieval-augmented reasoning over trusted personal context
+- **Python Ingestion & Evaluation Sidecar** — document normalization, CLI tooling and retrieval quality evaluation
 - **Timeline** — inspect how knowledge and decisions evolve
 
 ## Architecture direction
@@ -47,32 +48,47 @@ Instead of asking an AI to remember everything implicitly, Aegis makes memory a 
 User / UI
    |
    v
-Application Layer
+Next.js / TypeScript Application
    |
    +--> Knowledge API
    +--> Decision API
-   +--> Project Context API
+   +--> Retrieval API
    |
    v
 Retrieval & Reasoning Layer
    |
    +--> Semantic Search
-   +--> Graph Traversal
    +--> Context Assembly
    +--> LLM Gateway
    |
-   v
-Data Layer
-   |
-   +--> PostgreSQL
-   +--> pgvector
-   +--> Relationship Graph
-   +--> Audit / Decision History
+   +--------------------------+
+   |                          |
+   v                          v
+PostgreSQL / pgvector    Python Aegis Forge
+                         +--> Markdown ingestion
+                         +--> normalization
+                         +--> retrieval evaluation
+                         +--> CLI automation
 ```
 
 ## Technology
 
-`Next.js` · `React` · `TypeScript` · `PostgreSQL` · `Supabase` · `pgvector` · `RAG` · `Embeddings` · `LLM provider abstraction` · `Vercel`
+`Next.js` · `React` · `TypeScript` · **`Python`** · `Pydantic` · `Typer` · `pytest` · `PostgreSQL` · `Supabase` · `pgvector` · `RAG` · `Embeddings` · `Vercel`
+
+### Python / Aegis Forge
+
+The `python/` workspace is an independently installable Python package named **Aegis Forge**. It represents the data and AI tooling side of the project rather than another web frontend.
+
+Current capabilities include:
+
+- typed ingestion models with Pydantic
+- Markdown-to-knowledge normalization pipeline
+- command-line ingestion tooling with Typer
+- retrieval evaluation metrics
+- automated pytest coverage
+- Ruff-ready project configuration
+
+This component demonstrates **Python for AI/data engineering, automation and evaluation workflows** alongside Aegis's TypeScript application layer.
 
 ## Design principles
 
@@ -99,11 +115,11 @@ Aegis reflects Musa Divarcı's approach to software architecture: separate durab
 
 ## Status
 
-Aegis is under active development. The foundation includes a Next.js/TypeScript application, domain contracts, provider-independent embedding architecture, semantic retrieval, a Supabase/pgvector persistence design, traceable answer contracts and CI build validation.
+Aegis is under active development. The foundation includes a Next.js/TypeScript application, domain contracts, provider-independent embedding architecture, semantic retrieval, a Supabase/pgvector persistence design, traceable answer contracts, a Python ingestion/evaluation toolchain and CI validation for both ecosystems.
 
 The first vertical slice follows this path:
 
-`capture knowledge -> create embedding -> retrieve context -> produce traceable answer`
+`capture knowledge -> normalize/ingest -> create embedding -> retrieve context -> evaluate retrieval -> produce traceable answer`
 
 ## Documentation
 
@@ -114,6 +130,10 @@ The first vertical slice follows this path:
 ## Author
 
 **Musa Divarcı** — Software Developer · Technology Leader · AI Systems Builder
+
+Primary technical areas represented in Aegis:
+
+`AI Architecture` · `TypeScript` · `Python` · `RAG` · `Data Tooling` · `Automation` · `Semantic Retrieval`
 
 GitHub: [github.com/musadivarci](https://github.com/musadivarci)
 
