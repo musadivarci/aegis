@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import re
-from pathlib import Path
 from collections.abc import Iterable
+from pathlib import Path
 
 from aegis_forge.models import KnowledgeKind, KnowledgeRecord, SourceDocument
 
