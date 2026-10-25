@@ -1,8 +1,23 @@
 # Aegis
 
-> **Personal AI Knowledge & Decision Engine**
+<div align="center">
 
-**Created and engineered by [Musa Divarcı](https://github.com/musadivarci).**
+[![CI](https://github.com/musadivarci/aegis/actions/workflows/ci.yml/badge.svg)](https://github.com/musadivarci/aegis/actions/workflows/ci.yml)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![pgvector](https://img.shields.io/badge/PostgreSQL-pgvector-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+### Personal AI Knowledge & Decision Engine
+*Persistent memory architecture, RAG retrieval evaluation, and structured decision ledgers.*
+
+**Created and engineered by [Musa Divarcı](https://github.com/musadivarci)**
+
+---
+
+</div>
 
 Aegis is an experimental personal intelligence system designed by **Musa Divarcı** to connect **knowledge, decisions, projects and context** into one persistent, inspectable memory architecture.
 
@@ -129,13 +144,13 @@ The first vertical slice follows this path:
 
 ## Author
 
-**Musa Divarcı** — Software Developer · Technology Leader · AI Systems Builder
+**Musa Divarcı** — Software Developer · Technology Leader · AI Systems Builder  
+- 🌍 **Website:** [musadivarci.com.tr](https://www.musadivarci.com.tr/)  
+- 💼 **LinkedIn:** [linkedin.com/in/musa-divarci-9280515a](https://www.linkedin.com/in/musa-divarci-9280515a)  
+- 🐙 **GitHub:** [@musadivarci](https://github.com/musadivarci)
 
-Primary technical areas represented in Aegis:
-
+Primary technical areas represented in Aegis:  
 `AI Architecture` · `TypeScript` · `Python` · `RAG` · `Data Tooling` · `Automation` · `Semantic Retrieval`
-
-GitHub: [github.com/musadivarci](https://github.com/musadivarci)
 
 Aegis is an independent software engineering project created and maintained by Musa Divarcı.
 

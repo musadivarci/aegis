@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from enum import StrEnum
 from pathlib import Path
 from uuid import UUID, uuid4
@@ -27,7 +27,7 @@ class KnowledgeRecord(BaseModel):
     content: str = Field(min_length=1)
     kind: KnowledgeKind = KnowledgeKind.NOTE
     source: str | None = None
-    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 
 class EvaluationCase(BaseModel):
